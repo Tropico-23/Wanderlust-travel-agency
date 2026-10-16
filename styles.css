@@ -1,0 +1,84 @@
+:root {
+    --color-primary: #FA5C30;          
+    --color-primary-hover: #E94D25;
+    --color-primary-dark: #C94320;
+    --color-secondary: #0E212E;
+    --color-secondary-light: #263E48;
+    --color-accent: #C7E0C9;
+    --color-accent-dark: #42765D;
+    --color-sand: #EDE0C7;
+    --color-background: #FAF7F0;       /* Warm cream */
+    --color-surface: #FFFFFF;           /* Cards and panels */
+    --color-surface-muted: #F5F1E8;
+    --color-background-dark: #0E212E;
+    --color-background-accent: #C7E0C9;
+    --color-background-highlight: #FA5C30;
+    --color-text: #14292E;              /* Main text */
+    --color-text-heading: #0E212E;       /* Headings */
+    --color-text-secondary: #667878;    /* Secondary text */
+    --color-text-muted: #84908C;         /* Captions */
+    --color-text-light: #FFFFFF;         /* Text on dark backgrounds */
+    --color-text-on-primary: #FFFFFF;
+    --color-border: #E0E0D4;
+    --color-border-strong: #C9CEC3;
+    --color-divider: #E0E0D4;
+    --border-width: 1px;
+    --font-family-base: "Inter", sans-serif;
+    --font-family-heading: "Inter", sans-serif;
+    --font-size-xs: 0.75rem;       /* 12px */
+    --font-size-sm: 0.875rem;      /* 14px */
+    --font-size-base: 1rem;         /* 16px */
+    --font-size-md: 1.125rem;       /* 18px */
+    --font-size-lg: 1.25rem;        /* 20px */
+    --font-size-xl: 1.5rem;         /* 24px */
+    --font-size-2xl: 2rem;          /* 32px */
+    --font-size-3xl: 2.5rem;        /* 40px */
+    --font-size-hero: 3.5rem;       /* 56px */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+}
+
+body {
+    background-color: var(--color-background);
+    margin: 0;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 6%;
+    box-sizing: border-box;
+    width: 100%;
+}
+#logo {
+    flex-shrink: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    flex: 1;
+}
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-family: var(--font-family-base);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+input{
+    box-sizing: border-box;
+    background-color: #0E212E;
+    color: #ede0c7;
+    padding: 0 24px;
+    border: none;
+    border-radius: 28px;
+    height: 48px;
+    width: 158px;
+    flex-shrink: 0;
+}
