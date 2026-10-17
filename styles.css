@@ -7,17 +7,17 @@
     --color-accent: #C7E0C9;
     --color-accent-dark: #42765D;
     --color-sand: #EDE0C7;
-    --color-background: #FAF7F0;       /* Warm cream */
-    --color-surface: #FFFFFF;           /* Cards and panels */
+    --color-background: #FAF7F0;
+    --color-surface: #FFFFFF;
     --color-surface-muted: #F5F1E8;
     --color-background-dark: #0E212E;
     --color-background-accent: #C7E0C9;
     --color-background-highlight: #FA5C30;
-    --color-text: #14292E;              /* Main text */
-    --color-text-heading: #0E212E;       /* Headings */
-    --color-text-secondary: #667878;    /* Secondary text */
-    --color-text-muted: #84908C;         /* Captions */
-    --color-text-light: #FFFFFF;         /* Text on dark backgrounds */
+    --color-text: #14292E;
+    --color-text-heading: #0E212E;
+    --color-text-secondary: #667878;
+    --color-text-muted: #84908C;
+    --color-text-light: #FFFFFF;
     --color-text-on-primary: #FFFFFF;
     --color-border: #E0E0D4;
     --color-border-strong: #C9CEC3;
@@ -25,15 +25,15 @@
     --border-width: 1px;
     --font-family-base: "Inter", sans-serif;
     --font-family-heading: "Inter", sans-serif;
-    --font-size-xs: 0.75rem;       /* 12px */
-    --font-size-sm: 0.875rem;      /* 14px */
-    --font-size-base: 1rem;         /* 16px */
-    --font-size-md: 1.125rem;       /* 18px */
-    --font-size-lg: 1.25rem;        /* 20px */
-    --font-size-xl: 1.5rem;         /* 24px */
-    --font-size-2xl: 2rem;          /* 32px */
-    --font-size-3xl: 2.5rem;        /* 40px */
-    --font-size-hero: 3.5rem;       /* 56px */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-md: 18px;
+    --font-size-lg: 20px;
+    --font-size-xl: 24px;
+    --font-size-2xl: 32px;
+    --font-size-3xl: 40px;
+    --font-size-hero: 56px;
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
@@ -44,6 +44,8 @@ body {
     background-color: var(--color-background);
     margin: 0;
     overflow-x: hidden;
+    font-family: var(--font-family-base);
+    color: var(--color-text);
 }
 * {
     box-sizing: border-box;
@@ -51,22 +53,24 @@ body {
 header {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 20px 6%;
-    box-sizing: border-box;
     width: 100%;
     box-shadow: 0px 2px 4px  rgba(0, 0, 0,0.3);
 }
 #logo {
+    display: flex;
     flex-shrink: 0;
 }
 
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
     width: 100%;
-    flex: 1;
+    margin-left: 20px;
 }
 nav a {
     text-decoration: none;
@@ -75,6 +79,7 @@ nav a {
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
+    white-space: nowrap;
 }
 header nav input{
     box-sizing: border-box;
@@ -86,15 +91,29 @@ header nav input{
     height: 48px;
     width: 158px;
     flex-shrink: 0;
+    font: inherit;
+    cursor: pointer;
+    flex-shrink: 0;
 }
-.hero{
+.hero {
     background-color: var(--color-background-dark);
-    padding: 40px 70px 40px 80px;
-    display: flex;
+    padding: clamp(32px, 4vw, 40px) clamp(24px, 5.5vw, 80px);
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 420px), 1fr)
+    );
+    gap: clamp(28px, 5vw, 64px);
+    align-items: center;
 }
 .hero img {
+    display: block;
+    width: 100%;
+    max-width: 630px;
+    aspect-ratio: 630 / 570;
+    object-fit: cover;
     border-radius: 28px;
-    float: right;
+    justify-self: end;
 }
 .container{
     margin-right: 36px;
