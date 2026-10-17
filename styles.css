@@ -51,6 +51,7 @@ header {
     padding: 20px 6%;
     box-sizing: border-box;
     width: 100%;
+    box-shadow: 0px 2px 4px  rgba(0, 0, 0,0.3);
 }
 #logo {
     flex-shrink: 0;
@@ -71,7 +72,7 @@ nav a {
     font-weight: 500;
     line-height: 1.5;
 }
-input{
+header nav input{
     box-sizing: border-box;
     background-color: #0E212E;
     color: #ede0c7;
@@ -81,4 +82,40 @@ input{
     height: 48px;
     width: 158px;
     flex-shrink: 0;
+}
+.hero{
+    background-color: var(--color-background-dark);
+    padding: 40px 70px 40px 80px;
+    display: flex;
+}
+.hero img {
+    border-radius: 28px;
+    float: right;
+}
+.container{
+    margin-right: 36px;
+}
+#hero-description{
+    color: var(--color-accent);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    margin: 20px 0 20px 0;
+}
+#hero-title{
+    color: var(--color-surface);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-hero);
+    margin: 20px 0 20px 0;
+}
+#hero-title p{
+    margin: 0px;
+}
+#hero-mini-text{
+    background-color: var(--color-secondary-light);
+    color: var(--color-text-light);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-semibold);
+    width: fit-content;
+    padding: 12px;
+    border-radius: 19px;
 }
