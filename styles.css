@@ -94,6 +94,7 @@ header nav input{
 }
 .container{
     margin-right: 36px;
+    height:570px;
 }
 #hero-description{
     color: var(--color-accent);
